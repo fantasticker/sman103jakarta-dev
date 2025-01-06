@@ -14,16 +14,11 @@ Route::get('/tentang', function () {
 });
 
 Route::get('/berita', function () {
+
     return view('berita', ['title' => 'Berita', 'posts' => Post::all()]);
 });
 
-Route::get('/berita/{slug}', function ($slug) {
-
-    // $berita = Arr::first(Post::all(), function ($post) use ($slug) {
-    //     return $post['slug'] == $slug;
-    // });
-
-    $post = Post::find($slug);
+Route::get('/berita/{post:slug}', function (Post $post) {
 
     return view('isi-berita', ['title' => 'Isi Berita', 'post' => $post]);
     return back();
