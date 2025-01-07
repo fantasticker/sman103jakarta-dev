@@ -14,7 +14,7 @@
                             <a href="/berita/{{ $berita['slug'] }}"
                                 class="hover:text-blue-500 transition duration-300">{{ $berita['title'] }}</a>
                         </h2>
-                        <p class="text-gray-600">by {{ $berita['author'] }} |
+                        <p class="text-gray-600">by {{ $berita['author']->name }} |
                             {{ $berita->created_at->diffForHumans() }}</p>
                         <p class="text-gray-700 mt-2">
                             {{ Str::limit($berita['body'], 100, '...') }}

@@ -124,7 +124,7 @@
                                     <a href="berita/{{ $berita['slug'] }}">{{ $berita['title'] }}</a>
                                 </h3>
                                 <p class="text-gray-600 text-sm mb-2">
-                                    {{ $berita['author'] }}
+                                    {{ $berita['author']->name }}
                                 </p>
                             </div>
                         @endif
