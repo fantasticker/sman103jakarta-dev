@@ -10,7 +10,7 @@
             <h1 class="text-3xl font-bold mb-2">
                 {{ $post['title'] }}
             </h1>
-            <p class="text-gray-600 mb-6">by {{ $post->author }} | {{ $post->created_at->format('d F Y') }}</p>
+            <p class="text-gray-600 mb-6">by {{ $post->author->name }} | {{ $post->created_at->format('d F Y') }}</p>
             <img alt="Foto Upacara.jpg" class="w-1/2 mb-6 mx-auto" src="{{ asset($post['image']) }}" />
             <p class="text-gray-700 mb-4">
                 {{ $post['body'] }}

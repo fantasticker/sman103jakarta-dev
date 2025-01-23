@@ -48,6 +48,6 @@ class User extends Authenticatable
 
     public function post(): HasMany
     {
-        return $this->hasMany(Post::class, 'author_id', 'id');
+        return $this->hasMany(Post::class, 'author_id', 'id')->cheaperone();
     }
 }

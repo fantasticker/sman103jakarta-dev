@@ -1,7 +1,61 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
     <main>
-        <section class="relative">
+
+        <section id="controls-carousel" class="relative w-full md:h-[80vh]" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="relative h-28 overflow-hidden md:h-full object-cover">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="{{ asset('storage/images/tampak depan.jpg') }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ asset('storage/images/upacara sumpah pemuda.jpg') }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="{{ asset('storage/images/apel tamu penegak.jpg') }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="{{ asset('storage/images/diterima PTN.png') }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-orange-400/50 dark:bg-gray-800/30 group-hover:bg-orange-400/85 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-orange-400/50 dark:bg-gray-800/30 group-hover:bg-orange-400/85 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </section>
+
+        {{-- <section class="relative">
             <img class="absolute w-1/2 h-full opacity-85" src="{{ asset('storage/images/Ellipse 2.png') }}"
                 alt="" />
             <img class="w-screen object-cover" src="{{ asset('storage/images/tampak depan.jpg') }}" alt="" />
@@ -17,11 +71,10 @@
                     dan Non Akademik
                 </h1>
             </div>
-        </section>
+        </section> --}}
 
         <section class="relative lg:py-5">
-            <div
-                class="lg:hidden w-4/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 bg-white rounded-lg shadow-lg">
+            <div class="lg:hidden w-4/5 mx-auto mt-4 bg-white rounded-lg shadow-xl border-2">
                 <div class="flex justify-center items-center p-1">
                     <div class="flex-1 text-sm text-center">
                         <p class="font-bold">133</p>
@@ -41,8 +94,7 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="hidden lg:block w-11/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-16 bg-white rounded-lg shadow-lg">
+            <div class="hidden lg:block w-11/12 mx-auto mt-4 bg-white rounded-lg shadow-xl border-2">
                 <div class="flex justify-around items-center p-4">
                     <div class="flex-1 text-center">
                         <p class="text-3xl font-bold">133</p>
@@ -64,7 +116,7 @@
             </div>
         </section>
 
-        <section class="container mx-auto p-12">
+        <section class="container mx-auto px-12 py-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div>
                     <h2 class="text-lg lg:text-2xl font-bold mb-4">

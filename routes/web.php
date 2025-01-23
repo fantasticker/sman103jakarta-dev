@@ -10,8 +10,16 @@ Route::get('/', function () {
     return view('beranda', ['title' => 'Beranda', 'posts' => Post::all()]);
 });
 
-Route::get('/tentang', function () {
-    return view('tentang', ['title' => 'Tentang']);
+Route::get('/profil-singkat', function () {
+    return view('profil-singkat', ['title' => 'Profil Singkat']);
+});
+
+Route::get('/manajemen-sekolah', function () {
+    return view('manajemen-sekolah', ['title' => 'Manajemen Sekolah']);
+});
+
+Route::get('/pendanaan', function () {
+    return view('pendanaan', ['title' => 'BOS dan BOP', 'posts' => Post::all()]);
 });
 
 Route::get('/berita', function () {
